@@ -56,7 +56,7 @@ const bindEvents = () => {
 }
 
 const onUserTyping = (data) => {
-  userTypingDiv.innerHTML = `<p>${data.user.username} yazıyor..</p>.`
+  userTypingDiv.innerHTML = `<p>${data.user.username} yazıyor..</p>`
 }
 
 bindEvents();
