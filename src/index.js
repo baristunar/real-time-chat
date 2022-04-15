@@ -7,9 +7,9 @@ const io = new Server(server);
 const dotenv = require("dotenv");
 
 dotenv.config();
-app.use(express.static(__dirname + '/public'));
+app.use(express.static(__dirname + "/public"));
 
-console.log('NODE_ENV', process.env.NODE_ENV)
+console.log("NODE_ENV", process.env.NODE_ENV);
 
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/views/index.html");
@@ -24,8 +24,7 @@ io.on("connection", (socket) => {
     io.sockets.emit("new-message", data);
   });
   socket.on("typing", (user) => {
-    console.log("user :>> ", user);
-    io.sockets.emit("typing", user);
+    socket.broadcast.emit("typing", user);
   });
 });
 const port = process.env.PORT;

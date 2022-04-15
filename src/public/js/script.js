@@ -32,11 +32,11 @@ const chatFormOnSubmit = (e) => {
     });
 
     chatTextInput.value = "";
-    userTypingDiv.textContent = ""
   }
 }
 
 const onNewMessage = (data) => {
+  userTypingDiv.innerHTML = ""; 
   const message = `<div class="chat-text">
   <span>${data.user?.username}:</span>  <span>${data.message}</span>
   </div>`
@@ -52,11 +52,11 @@ const chatTextInputOnChange = () => {
 const bindEvents = () => {
   usernameForm.addEventListener('submit', usernameFormOnSubmit);
   chatForm.addEventListener('submit', chatFormOnSubmit);
-  chatTextInput.addEventListener('keydown', chatTextInputOnChange);
+  chatTextInput.addEventListener('keypress', chatTextInputOnChange);
 }
 
 const onUserTyping = (data) => {
-  userTypingDiv.textContent = `${data.user.username} yazıyor...`
+  userTypingDiv.innerHTML = `<p>${data.user.username} yazıyor..</p>.`
 }
 
 bindEvents();
