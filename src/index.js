@@ -4,10 +4,12 @@ const http = require("http");
 const server = http.createServer(app);
 const { Server } = require("socket.io");
 const io = new Server(server);
+const dotenv = require("dotenv");
 
+dotenv.config();
 app.use(express.static(__dirname + '/public'));
 
-console.log('__dirname', __dirname)
+console.log('NODE_ENV', process.env.NODE_ENV)
 
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/views/index.html");
@@ -26,9 +28,7 @@ io.on("connection", (socket) => {
     io.sockets.emit("typing", user);
   });
 });
-
-const PORT = 3000;
-
-server.listen(PORT, () => {
-  console.log(`Server listening on ${PORT}`);
+const port = process.env.PORT;
+server.listen(port, () => {
+  console.log(`Server listening on ${port}`);
 });
