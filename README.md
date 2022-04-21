@@ -31,4 +31,4 @@ yarn start
 
 ## Contact
 
-If you want to give a feedback, you can reach me via tunarbaris7@gmail.com
+If you want to give me a feedback, you can reach me via tunarbaris7@gmail.com
