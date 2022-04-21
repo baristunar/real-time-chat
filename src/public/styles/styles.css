@@ -49,6 +49,7 @@ body {
 
 .chat-user-typing {
   padding: 10px 20px;
+  height: 35px;
 }
 
 .chat-inner {
@@ -61,7 +62,7 @@ body {
 
 .chat-messages {
   width: 100%;
-  height: calc(100% - 70px);
+  height: calc(100% - 105px);
   overflow-y: auto;
 }
 

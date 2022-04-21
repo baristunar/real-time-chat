@@ -9,8 +9,6 @@ const dotenv = require("dotenv");
 dotenv.config();
 app.use(express.static(__dirname + "/public"));
 
-console.log("NODE_ENV", process.env.NODE_ENV);
-
 app.get("/", (req, res) => {
   res.sendFile(__dirname + "/views/index.html");
 });

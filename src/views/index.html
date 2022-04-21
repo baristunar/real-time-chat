@@ -1,43 +1,52 @@
 <!DOCTYPE html>
 <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Chat app</title>
+    <link rel="stylesheet" href="/styles/styles.css" />
+  </head>
 
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Chat app</title>
-  <link rel="stylesheet" href="/styles/styles.css">
-</head>
+  <body>
+    <div class="container hidden">
+      <div class="chat">
+        <div class="chat-logged-user"></div>
+        <div class="chat-inner">
+          <div class="chat-user-typing"></div>
+          <div class="chat-messages"></div>
+          <form class="chat-form">
+            <div class="chat-form__input-area">
+              <input
+                class="chat-form__input"
+                placeholder="Mesaj"
+                type="text"
+                name="message"
+                id="message"
+              />
+              <button class="submit-btn">Gönder</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
 
-<body>
-  
-  <div class="container hidden">
-    <div class="chat">
-      <div class="chat-logged-user"></div>
-      <div class="chat-inner">
-        <div class="chat-user-typing"></div>
-        <div class="chat-messages"></div>
-        <form class="chat-form">
-          <div class="chat-form__input-area">
-            <input class="chat-form__input" placeholder="Mesaj" type="text" name="message" id="message">
-            <button class="submit-btn">Gönder</button>
-          </div>
+    <div class="overlay">
+      <div class="modal">
+        <form class="username-form">
+          <input
+            class="username-form__input"
+            type="text"
+            id="username"
+            name="username"
+            placeholder="Kullanıcı adınız"
+            required
+          />
+          <button>Giriş Yap</button>
         </form>
       </div>
     </div>
-  </div>
-
-  <div class="overlay">
-    <div class="modal">
-      <form class="username-form">
-        <input class="username-form__input" type="text" id="username" name="username" placeholder="Kullanıcı adınız" required>
-        <button>Giriş Yap</button>
-      </form>
-
-    </div>
-  </div>
-  <script src="/socket.io/socket.io.js"></script>
-  <script src="/js/script.js"></script>
-</body>
-
+    <script src="/socket.io/socket.io.js"></script>
+    <script src="/js/script.js"></script>
+  </body>
 </html>
