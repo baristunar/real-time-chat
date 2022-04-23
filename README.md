@@ -31,7 +31,11 @@ yarn start
 
 ## Contact
 
-If you want to give me a feedback, you can reach me via tunarbaris7@gmail.com
+* <a href="mailto:tunarbaris7@gmail.com">Email</a>
+* [Twitter](https://twitter.com/baristunar)
+* [Linkedin](https://www.linkedin.com/in/baristunar/)
+* [Github](https://github.com/baristunar)
+
 ## License
 
 MIT License
